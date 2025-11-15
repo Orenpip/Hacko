@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Canvas Grade Viewer",
+  "version": "1.0",
+  "description": "Displays your Canvas grades in a popup and inside Canvas.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://canvas.its.virginia.edu/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Canvas Grades"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://canvas.its.virginia.edu/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
